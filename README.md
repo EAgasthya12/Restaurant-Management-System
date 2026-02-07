@@ -64,4 +64,3 @@ const menuData = [
 ## 📄 License
 
 This project is open-source and available for personal or educational use.
-# Restaurant-Management-System
