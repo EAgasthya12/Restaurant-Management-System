@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Haven | Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Gourmet<span class="highlight">Haven</span>.</a>
+            <div class="nav-links">
+                <a href="#menu" class="active">Menu</a>
+                <a href="#about">About</a>
+                <button id="cart-btn" class="cart-toggle">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Taste the <span class="text-gradient">Extraordinary</span></h1>
+            <p class="hero-subtitle">Experience culinary excellence crafted with passion and precise flavors.</p>
+            <a href="#menu" class="btn-primary">View Menu</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="section-header">
+                <h2>Our <span class="serif">Menu</span></h2>
+                <div class="categories" id="category-filters">
+                    <button class="cat-btn active" data-category="all">All</button>
+                    <button class="cat-btn" data-category="starters">Starters</button>
+                    <button class="cat-btn" data-category="mains">Mains</button>
+                    <button class="cat-btn" data-category="desserts">Desserts</button>
+                    <button class="cat-btn" data-category="drinks">Drinks</button>
+                </div>
+            </div>
+
+            <div id="menu-grid" class="menu-grid">
+                <!-- Menu items injected via JS -->
+            </div>
+        </section>
+
+        <!-- Cart Sidebar -->
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button id="close-cart" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items injected via JS -->
+                <div class="empty-cart-msg">Your cart is empty</div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal-price">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (10%)</span>
+                    <span id="tax-price">₹0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total-price">₹0.00</span>
+                </div>
+                <button id="checkout-btn" class="btn-block checkout-btn" disabled>Confirm Order</button>
+            </div>
+        </aside>
+        <div class="cart-overlay" id="cart-overlay"></div>
+
+    </main>
+
+    <!-- Order Confirmation Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for dining with us. Your delicious meal is being prepared.</p>
+            <div class="order-summary-mini">
+                <p>Total Paid: <span id="modal-total" class="highlight-text"></span></p>
+            </div>
+            <button id="new-order-btn" class="btn-primary">Place New Order</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Gourmet Haven. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
